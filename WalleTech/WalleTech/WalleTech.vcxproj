@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{bd50f3d0-9073-41ad-88d2-e4a1763a48ab}</ProjectGuid>
+    <RootNamespace>WalleTech</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>STATIC_CONCPP;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>mysql-connector-c++-9.1.0-winx64\include\jdbc;%(AdditionalIncludeDirectories);$(SolutionDir)vendor\raylib\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>mysql-connector-c++-9.1.0-winx64\lib64\vs14;%(AdditionalLibraryDirectories);$(SolutionDir)vendor\raylib\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>mysqlcppconn-static.lib;$(CoreLibraryDependencies);%(AdditionalDependencies);raylib.lib;winmm.lib;gdi32.lib;user32.lib;shell32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>STATIC_CONCPP;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>mysql-connector-c++-9.1.0-winx64\include\jdbc;%(AdditionalIncludeDirectories);$(SolutionDir)vendor\raylib\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>mysql-connector-c++-9.1.0-winx64\lib64\vs14;%(AdditionalLibraryDirectories);$(SolutionDir)vendor\raylib\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>mysqlcppconn-static.lib;$(CoreLibraryDependencies);%(AdditionalDependencies);raylib.lib;winmm.lib;gdi32.lib;user32.lib;shell32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cpp\checkLogIn.cpp" />
+    <ClCompile Include="cpp\connect.cpp" />
+    <ClCompile Include="cpp\createAccount.cpp" />
+    <ClCompile Include="cpp\createAndSaveLastFourTransactions.cpp" />
+    <ClCompile Include="cpp\createDatabases.cpp" />
+    <ClCompile Include="cpp\createFinanceTables.cpp" />
+    <ClCompile Include="cpp\createTables.cpp" />
+    <ClCompile Include="cpp\dashboardInitialize.cpp" />
+    <ClCompile Include="cpp\dashboardMinus.cpp" />
+    <ClCompile Include="cpp\dashboardPlus.cpp" />
+    <ClCompile Include="cpp\delete.cpp" />
+    <ClCompile Include="cpp\firstNameInput.cpp" />
+    <ClCompile Include="cpp\flagsDashboard.cpp" />
+    <ClCompile Include="cpp\flagsLogIn.cpp" />
+    <ClCompile Include="cpp\flagsQuestions.cpp" />
+    <ClCompile Include="cpp\flagsSignUp.cpp" />
+    <ClCompile Include="cpp\getAverageIncomeLastThreeMonths.cpp" />
+    <ClCompile Include="cpp\getAverageSpendingsLastThreeMonths.cpp" />
+    <ClCompile Include="cpp\getBalance.cpp" />
+    <ClCompile Include="cpp\getFirstName.cpp" />
+    <ClCompile Include="cpp\getLastFourTransaction.cpp" />
+    <ClCompile Include="cpp\getLastName.cpp" />
+    <ClCompile Include="cpp\InputHandlerInitialize.cpp" />
+    <ClCompile Include="cpp\InsertIncomeLastThreeMonths.cpp" />
+    <ClCompile Include="cpp\InsertSpendingsLastThreeMonths.cpp" />
+    <ClCompile Include="cpp\insertTransactionExpenses.cpp" />
+    <ClCompile Include="cpp\insertTransactionRevenues.cpp" />
+    <ClCompile Include="cpp\lastNameInput.cpp" />
+    <ClCompile Include="cpp\logInCount.cpp" />
+    <ClCompile Include="cpp\LogInSignUpButtons.cpp" />
+    <ClCompile Include="cpp\passwordInput.cpp" />
+    <ClCompile Include="cpp\questionOne.cpp" />
+    <ClCompile Include="cpp\questions.cpp" />
+    <ClCompile Include="cpp\questionsInitialize.cpp" />
+    <ClCompile Include="cpp\questionThreeFour.cpp" />
+    <ClCompile Include="cpp\questionTwo.cpp" />
+    <ClCompile Include="cpp\resetVars.cpp" />
+    <ClCompile Include="cpp\setBalance.cpp" />
+    <ClCompile Include="cpp\SQLInitialize.cpp" />
+    <ClCompile Include="cpp\Textures.cpp" />
+    <ClCompile Include="cpp\updatebalanceAfterExpense.cpp" />
+    <ClCompile Include="cpp\updateBalanceAfterRevenue.cpp" />
+    <ClCompile Include="cpp\usernameInput.cpp" />
+    <ClCompile Include="WalleTech.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\Dashboad.h" />
+    <ClInclude Include="Include\InputHandler.h" />
+    <ClInclude Include="Include\LogInSignUpButtons.h" />
+    <ClInclude Include="Include\pch.h" />
+    <ClInclude Include="Include\Questions.h" />
+    <ClInclude Include="Include\SQL.h" />
+    <ClInclude Include="Include\Textures.h" />
+    <ClInclude Include="Include\WalleTech.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
