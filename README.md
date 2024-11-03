@@ -1,7 +1,7 @@
 <h1 align="center">Walletech</h1>
 <br>
 <p align="center">
-  <img src="Documentation/logo.png" alt="logo" height="250" width="250">
+  <img src="Documentation/logo.png" alt="logo" height="190" width="310">
 </p>
 <br>
 
