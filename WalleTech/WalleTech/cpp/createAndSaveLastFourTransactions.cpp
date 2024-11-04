@@ -2,6 +2,8 @@
 
 void SQLCreateAndSaveLastFourTransactions(string arr[4][3], string username)
 {  
+     try
+     {
      con->setSchema("finance"); // Use the finance database
 
      for (int i = 0; i < 4; i++) 
@@ -12,4 +14,11 @@ void SQLCreateAndSaveLastFourTransactions(string arr[4][3], string username)
        pstmt->setString(3, arr[i][2]);
        pstmt->executeUpdate(); // execute the query
      }
+          
+     }          
+     catch(...)
+     {
+     return;                    
+     }
+     
 }
