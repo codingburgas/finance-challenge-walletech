@@ -89,7 +89,7 @@ void dashboardMinus(Textures* t)
                         double sqlBalance;
                         conv >> sqlBalance;
 
-                        if (enteredAmount <= sqlBalance)
+                        if (enteredAmount < sqlBalance)
                             amount += (char)i;
                         else
                             continue;
